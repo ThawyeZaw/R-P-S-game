@@ -1,0 +1,189 @@
+body, *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+img{
+    width: 100%;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-image: linear-gradient(315deg, hsl(189, 100%, 50%), hsl(209, 100%, 50%));
+}
+
+.container > *{
+    position: absolute;
+}
+
+.title{
+    display: flex;
+    width: 100vw;
+    height: 20vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.title > p{
+    height: 50%;
+}
+
+.title > .labels{
+    height: 50%;
+    width: 50%;
+    min-width: 500px;
+    display: flex;
+}
+
+#mymark{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.ans{
+    max-width: 400px;
+    width: 60%;
+}
+
+.me{
+    width: 50vw;
+    height: 80vh;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+}
+
+.me > *{
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.choose{
+    width: 7vw;
+    display: flex;
+    flex-direction: column;
+    top: 3%;
+    left: 10%;
+    height: 70%;
+    justify-content: center;
+}
+
+.choose > *{
+    padding: 0.2rem;
+    min-width: 55px;
+    margin: 5px;
+    border-radius: 8px;
+    background: linear-gradient(92deg, hsl(189, 100%, 50%), hsl(209, 100%, 50%));
+}
+
+.myans{
+    position: absolute;
+    right: 10%;
+}
+
+.myans::after{
+    content: "ME";
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.bot{
+    width: 50vw;
+    height: 80vh;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+}
+
+.botans{
+    position: absolute;
+    left: 10%;
+    margin-bottom: 2rem;
+}
+
+.botans::after{
+    content: "BOT";
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.btns{
+    position: absolute;
+    right: 2vmax;
+    bottom: 2vmin;
+    display: flex;
+}
+
+.btns > * {
+    margin-left: 1rem;
+    min-width: 70px;
+    width: 10vw;
+    height: 5vw;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 7px 8px 20px -5px rgba(0,0,0,0.79);
+    background-image: linear-gradient(315deg, hsl(209, 100%, 50%), hsl(189, 100%, 50%));
+}
+
+@media (max-width:1025px) and (orientation:portrait) {
+    .title{
+        position: relative;
+    }
+    
+    .ans{
+        height: 60%;
+        width: 40%;
+        max-width: 300px;
+    }
+
+    .ans > img{
+        height: 100%;
+        width: 100%;
+    }
+    
+    .bot{
+        position: relative;
+        width: 100vw;
+        height: 40vh;
+        display: flex;
+    }
+
+    .botans{
+        position: relative;
+        left: 30%;
+    }
+
+    .me{
+        position: relative;
+        width: 100vw;
+        height: 40vh;
+    }
+
+    .choose{
+        flex-direction: column;
+        width: 8%;
+    }
+
+    .myans{
+        position: absolute;
+        right: 30%;
+    }
+}
